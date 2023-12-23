@@ -1,0 +1,135 @@
+<?xml version='1.0' encoding='utf-8'?>
+<addons><addon id="repository.zelkami" name="ZelKami Repository" version="1.0.0" provider-name="ZelKami">
+    <extension point="xbmc.addon.repository" name="Example Repository">
+        <dir>
+            <info compressed="false">https://raw.githubusercontent.com/ZelKami/zelkami.github.io/master/repo/zips/addons.xml</info>
+            <checksum>https://raw.githubusercontent.com/ZelKami/zelkami.github.io/master/repo/zips/addons.xml.md5</checksum>
+            <datadir zip="true">https://raw.githubusercontent.com/ZelKami/zelkami.github.io/master/repo/zips/</datadir>
+        </dir>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary>ZelKami Repository</summary>
+        <description>Repository for all of ZelKami's addons.</description>
+        <disclaimer />
+        <platform>all</platform>
+        <assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.jpg</fanart>
+        </assets>
+    </extension>
+</addon><addon id="script.module.trakt.zelkami" name="trakt.py (ZelKami)" version="1.0.0" provider-name="ZelKami">
+  <requires>
+    <import addon="xbmc.python" version="3.0.0" />
+    <import addon="script.module.requests" version="2.16.1" />
+    <import addon="script.module.six" version="1.10.0" />
+    <import addon="script.module.arrow" version="1.0.3" />
+  </requires>
+  <extension point="xbmc.python.module" library="lib" />
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en_GB">Python interface for the trakt.tv API</summary>
+    <description lang="en_GB">Packed for Kodi from https://github.com/fuzeman/trakt.py</description>
+    <platform>all</platform>
+    <license>MIT</license>
+    <source>https://github.com/ZelKami/script.module.trakt.zelkami</source>
+    <assets>
+      <icon>icon.png</icon>
+    </assets>
+  </extension>
+</addon><addon id="script.trakt.zelkami" name="Trakt (ZelKami)" version="1.0.0" provider-name="ZelKami">
+    <requires>
+        <import addon="xbmc.python" version="3.0.0" />
+        <import addon="script.module.trakt.zelkami" version="1.0.0" />
+        <import addon="script.module.dateutil" version="2.8.1" />
+    </requires>
+    <extension point="xbmc.python.script" library="defaultscript.py">
+        <provides>executable</provides>
+    </extension>
+    <extension point="xbmc.service" name="trakt.service" library="default.py" />
+    <extension point="xbmc.addon.metadata" name="trakt.metadata">
+        <platform>all</platform>
+        <license> GPL-2.0-only</license>
+        <forum>https://forum.kodi.tv/showthread.php?tid=220547</forum>
+        <website>https://trakt.tv</website>
+        <source>https://github.com/trakt/script.trakt.zelkami</source>
+        <news>- Clarify unit on startup delay
+- Migrate to new settings format
+- Allow to override global proxy settings
+- Fix empty movie title when year not included in showtitle
+- Fix runtime fallback for calculating episode and movie progress
+- Fix hide notifications when playing video
+- Update translations</news>
+        <assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.jpg</fanart>
+            <screenshot>resources/image-01.png</screenshot>
+            <screenshot>resources/image-02.png</screenshot>
+            <screenshot>resources/image-03.png</screenshot>
+        </assets>
+        <summary lang="de_DE">TV und Film Scrobbler für Trakt.tv</summary>
+        <summary lang="en_US">TV and movie scrobbler for Trakt.tv</summary>
+        <description lang="de_DE">Scrobble automatisch alle Serien und Filme die du schaust zu Trakt.tv! Behalte den Überblick über deine Sammlung und sei Teil einer globalen Gemeinschaft von Serien- und Filmliebhabern. Registriere jetzt deinen kostenlosen Account unter http://trakt.tv und bekomme einen Haufen Funktionen:[CR][CR]- Automatisches scrobbeln von dem was du guckst[CR]- Mobile Apps für iPhone, iPad, Android und Windows Phone[CR]- Teile was du schaust (in Echtzeit) und bewerte auf Facebook und Twitter[CR]- Personalisierte Kalender: So verpasst du nie wieder eine Serie[CR]- Folge deinen Freunden und Leuten, für die du dich interessierst[CR]- Mach dir Beobachtungsliste zu nutze, um nicht zu vergessen was du ansehen wolltest[CR]- Tracke deine Mediensammlung, um deine Freunde zu beeindrucken[CR]- Erstelle benutzerdefinierte Listen zu jedem Thema das dir einfällt[CR]- Behalte die Übersicht über deinen Fortschritt bei Serien[CR]- Überblicke deinen Fortschritt bei offiziellen Listen wie zum Beispiel den IMDb Top 250[CR]- Entdecke neue Serien und Filme anhand deines Geschmacks[CR]- Widgets für deine Forum Signatur[CR][CR]Was kann dieses Addon?[CR][CR]- Automatisches scrobbeln aller Serien und Filme die du anschaust[CR]- Synchronisiere deine gesammelten Serien und Filme zur Trakt Sammlung (direkt nach dem Bibliotheksupdate)[CR]- Automatisches aufräumen deiner Trakt Sammlung damit sie mit Kodi übereinstimmt[CR]- Halte gesehen Markierungen synchronisiert zwischen Kodi und Trakt[CR]- Bewerte Episoden und Filme direkt nach dem du sie geguckt hast[CR][CR]Besonderer Dank gilt allen die an diesem Plugin mit gearbeitet haben! Schau in die Commit Historie und das Änderungsprotokoll, um diese talentierten Entwickler zu sehen.</description>
+        <description lang="en_US">Automatically scrobble all TV episodes and movies you are watching to Trakt.tv! Keep a comprehensive history of everything you've watched and be part of a global community of TV and movie enthusiasts. Sign up for a free account at http://trakt.tv and get a ton of features:[CR][CR]- Automatically scrobble what you're watching[CR]- Mobile apps for iPhone, iPad, Android, and Windows Phone[CR]- Share what you're watching (in real time) and rating to facebook and twitter[CR]- Personalized calendar so you never miss a TV show[CR]- Follow your friends and people you're interesed in[CR]- Use watchlists so you don't forget to what to watch[CR]- Track your media collections and impress your friends[CR]- Create custom lists around any topics you choose[CR]- Easily track your TV show progress across all seasons and episodes[CR]- Track your progress against industry lists such as the IMDb Top 250[CR]- Discover new shows and movies based on your viewing habits[CR]- Widgets for your forum signature[CR][CR]What can this addon do?[CR][CR]- Automatically scrobble all TV episodes and movies you are watching[CR]- Sync your TV episode and movie collections to Trakt (triggered after a library update)[CR]- Auto clean your Trakt collection so that it matches up with Kodi[CR]- Keep watched statuses synced between Kodi and Trakt[CR]- Rate movies and episode after watching them[CR][CR]Special thanks to all who contributed to this plugin! Check the commit history and changelog to see these talented developers.</description>
+    </extension>
+</addon><addon id="skin.arctic.horizon.zelkami" name="Arctic Horizon 2" provider-name="jurialmunkey" version="1.0.0">
+    <requires>
+        <import addon="xbmc.gui" version="5.15.0" />
+        <import addon="script.skinshortcuts" version="0.4.0" />
+        <import addon="script.skinvariables" version="1.0.0" />
+        <import addon="script.texturemaker" version="0.2.8" />
+        <import addon="plugin.video.themoviedb.helper" version="5.1.11~nexus" />
+        <import addon="resource.images.weathericons.white" version="0.0.1" />
+        <import addon="resource.images.studios.coloured" version="0.0.1" />
+        <import addon="resource.font.robotocjksc" version="0.0.1" />
+    </requires>
+    <extension debugging="false" defaultthemename="Textures.xbt" effectslowdown="1" point="xbmc.gui.skin">
+        <res aspect="16:9" default="true" folder="1080i" height="1080" width="1920" />
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary lang="en">Minimal. Classic. Gradients. Widgets.</summary>
+        <description lang="en">Arctic Horizon 2</description>
+        <platform>all</platform>
+        <license>Creative Commons Attribution Non-Commercial Share-Alike 4.0</license>
+        <forum />
+        <source />
+        <assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.jpg</fanart>
+        </assets>
+    </extension>
+</addon><addon id="skin.estuary.zelkami" version="1.0.0" name="Estuary (ZelKami)" provider-name="ZelKami">
+	<requires>
+		<import addon="xbmc.gui" version="5.16.0" />
+	</requires>
+	<extension point="xbmc.gui.skin" debugging="false">
+		<res width="1920" height="1440" aspect="4:3" default="false" folder="xml" />
+		<res width="1920" height="1280" aspect="3:2" default="false" folder="xml" />
+		<res width="1920" height="1200" aspect="16:10" default="false" folder="xml" />
+		<res width="2040" height="1080" aspect="17:9" default="false" folder="xml" />
+		<res width="1920" height="1080" aspect="16:9" default="true" folder="xml" />
+		<res width="2560" height="1080" aspect="21:9" default="false" folder="xml" />
+		<res width="2338" height="1080" aspect="19.5:9" default="false" folder="xml" />
+		<res width="2160" height="1080" aspect="18:9" default="false" folder="xml" />
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<platform>all</platform>
+		<license>CC BY-SA 4.0, GNU GENERAL PUBLIC LICENSE Version 2.0</license>
+		<forum>http://forum.kodi.tv/</forum>
+		<source>https://github.com/xbmc/skin.estuary.zelkami/</source>
+		<assets>
+			<icon>resources/icon.png</icon>
+			<fanart>resources/fanart.jpg</fanart>
+			<screenshot>resources/screenshot-01.jpg</screenshot>
+			<screenshot>resources/screenshot-02.jpg</screenshot>
+			<screenshot>resources/screenshot-03.jpg</screenshot>
+			<screenshot>resources/screenshot-04.jpg</screenshot>
+			<screenshot>resources/screenshot-05.jpg</screenshot>
+			<screenshot>resources/screenshot-06.jpg</screenshot>
+			<screenshot>resources/screenshot-07.jpg</screenshot>
+			<screenshot>resources/screenshot-08.jpg</screenshot>
+		</assets>
+		<summary lang="de_DE">Modifizierter Estuary Skin von ZelKami.</summary>
+		<summary lang="en_US">Modified Estuary skin by ZelKami.</summary>
+		<description lang="de_DE">Estuary ist der Standardskin für Kodi 17.0 und höher. Diese Modifizierung versteckt Bewertungen von TMDB, IMDB und co.</description>
+		<description lang="en_US">Estuary is the default skin for Kodi 17.0 and above. This modification hides ratings from TMDB, IMDB, etc.</description>
+	</extension>
+</addon></addons>

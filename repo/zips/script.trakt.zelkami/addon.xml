@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="script.trakt.zelkami" name="Trakt (ZelKami)" version="1.0.0" provider-name="ZelKami">
+    <requires>
+        <import addon="xbmc.python" version="3.0.0"/>
+        <import addon="script.module.trakt.zelkami" version="1.0.0"/>
+        <import addon="script.module.dateutil" version="2.8.1"/>
+    </requires>
+    <extension point="xbmc.python.script" library="defaultscript.py">
+        <provides>executable</provides>
+    </extension>
+    <extension point="xbmc.service" name="trakt.service" library="default.py" />
+    <extension point="xbmc.addon.metadata" name="trakt.metadata">
+        <platform>all</platform>
+        <license> GPL-2.0-only</license>
+        <forum>https://forum.kodi.tv/showthread.php?tid=220547</forum>
+        <website>https://trakt.tv</website>
+        <source>https://github.com/trakt/script.trakt.zelkami</source>
+        <news>- Clarify unit on startup delay
+- Migrate to new settings format
+- Allow to override global proxy settings
+- Fix empty movie title when year not included in showtitle
+- Fix runtime fallback for calculating episode and movie progress
+- Fix hide notifications when playing video
+- Update translations</news>
+        <assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.jpg</fanart>
+            <screenshot>resources/image-01.png</screenshot>
+            <screenshot>resources/image-02.png</screenshot>
+            <screenshot>resources/image-03.png</screenshot>
+        </assets>
+        <summary lang="de_DE">TV und Film Scrobbler für Trakt.tv</summary>
+        <summary lang="en_US">TV and movie scrobbler for Trakt.tv</summary>
+        <description lang="de_DE">Scrobble automatisch alle Serien und Filme die du schaust zu Trakt.tv! Behalte den Überblick über deine Sammlung und sei Teil einer globalen Gemeinschaft von Serien- und Filmliebhabern. Registriere jetzt deinen kostenlosen Account unter http://trakt.tv und bekomme einen Haufen Funktionen:[CR][CR]- Automatisches scrobbeln von dem was du guckst[CR]- Mobile Apps für iPhone, iPad, Android und Windows Phone[CR]- Teile was du schaust (in Echtzeit) und bewerte auf Facebook und Twitter[CR]- Personalisierte Kalender: So verpasst du nie wieder eine Serie[CR]- Folge deinen Freunden und Leuten, für die du dich interessierst[CR]- Mach dir Beobachtungsliste zu nutze, um nicht zu vergessen was du ansehen wolltest[CR]- Tracke deine Mediensammlung, um deine Freunde zu beeindrucken[CR]- Erstelle benutzerdefinierte Listen zu jedem Thema das dir einfällt[CR]- Behalte die Übersicht über deinen Fortschritt bei Serien[CR]- Überblicke deinen Fortschritt bei offiziellen Listen wie zum Beispiel den IMDb Top 250[CR]- Entdecke neue Serien und Filme anhand deines Geschmacks[CR]- Widgets für deine Forum Signatur[CR][CR]Was kann dieses Addon?[CR][CR]- Automatisches scrobbeln aller Serien und Filme die du anschaust[CR]- Synchronisiere deine gesammelten Serien und Filme zur Trakt Sammlung (direkt nach dem Bibliotheksupdate)[CR]- Automatisches aufräumen deiner Trakt Sammlung damit sie mit Kodi übereinstimmt[CR]- Halte gesehen Markierungen synchronisiert zwischen Kodi und Trakt[CR]- Bewerte Episoden und Filme direkt nach dem du sie geguckt hast[CR][CR]Besonderer Dank gilt allen die an diesem Plugin mit gearbeitet haben! Schau in die Commit Historie und das Änderungsprotokoll, um diese talentierten Entwickler zu sehen.</description>
+        <description lang="en_US">Automatically scrobble all TV episodes and movies you are watching to Trakt.tv! Keep a comprehensive history of everything you&apos;ve watched and be part of a global community of TV and movie enthusiasts. Sign up for a free account at http://trakt.tv and get a ton of features:[CR][CR]- Automatically scrobble what you&apos;re watching[CR]- Mobile apps for iPhone, iPad, Android, and Windows Phone[CR]- Share what you&apos;re watching (in real time) and rating to facebook and twitter[CR]- Personalized calendar so you never miss a TV show[CR]- Follow your friends and people you&apos;re interesed in[CR]- Use watchlists so you don&apos;t forget to what to watch[CR]- Track your media collections and impress your friends[CR]- Create custom lists around any topics you choose[CR]- Easily track your TV show progress across all seasons and episodes[CR]- Track your progress against industry lists such as the IMDb Top 250[CR]- Discover new shows and movies based on your viewing habits[CR]- Widgets for your forum signature[CR][CR]What can this addon do?[CR][CR]- Automatically scrobble all TV episodes and movies you are watching[CR]- Sync your TV episode and movie collections to Trakt (triggered after a library update)[CR]- Auto clean your Trakt collection so that it matches up with Kodi[CR]- Keep watched statuses synced between Kodi and Trakt[CR]- Rate movies and episode after watching them[CR][CR]Special thanks to all who contributed to this plugin! Check the commit history and changelog to see these talented developers.</description>
+    </extension>
+</addon>
