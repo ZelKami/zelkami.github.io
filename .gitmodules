@@ -1,0 +1,12 @@
+[submodule "repo/skin.estuary.zelkami"]
+	path = repo/skin.estuary.zelkami
+	url = https://github.com/ZelKami/skin.estuary.zelkami
+[submodule "repo/script.module.trakt.zelkami"]
+	path = repo/script.module.trakt.zelkami
+	url = https://github.com/ZelKami/script.module.trakt.zelkami
+[submodule "repo/script.trakt.zelkami"]
+	path = repo/script.trakt.zelkami
+	url = https://github.com/ZelKami/script.trakt.zelkami
+[submodule "repo/skin.arctic.horizon.zelkami"]
+	path = repo/skin.arctic.horizon.zelkami
+	url = https://github.com/ZelKami/skin.arctic.horizon.zelkami
